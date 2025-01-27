@@ -21,5 +21,21 @@
 # 입출력 예2
 # a ⊕ b = 912 이고, 2 * a * b = 364 입니다. 둘 중 더 큰 값은 912 이므로 912를 return 합니다.
 
+import sys
+
 def solution(a, b):
     return max(int(str(a) + str(b)), 2 * a * b)
+
+# 테스트 케이스 추가
+if __name__ == '__main__':
+    # 입출력 예에 따른 테스트
+    test_cases = [
+        (2, 91), # 입출력 예 1
+        (91, 2), # 입출력 예 2
+        (10, 20), # 추가 테스트
+        (5, 5) # 추가 테스트
+    ]
+
+for a, b in test_cases:
+    result = solution(a, b)
+    print(f"input: {a}, b = {b} -> output: {result}")
